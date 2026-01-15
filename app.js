@@ -44,7 +44,7 @@ main()                            // he purna database connect karasathi
   });
 
 async function main() {
-  await mongoose.connect('mongodb://localhost:27017/wanderlust');
+  await mongoose.connect(process.env.ATLASDB_URL);
 }
 
 app.set("view engine", "ejs");     // it is required for template 
